@@ -1,0 +1,33 @@
+.Header{
+    width: 100%;
+    background-color: #0D1C2D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#Logo{
+    margin-left: 5%;
+    color: #A3ABC4;
+}
+.Nav{
+    width: 30%;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5%;
+}
+.Nav{
+    color: #D4E4FA;
+}
+#Register{
+   background-image: linear-gradient(to top right,#216DFF,#8AA8FF);
+   padding: 3%;
+   color: #FFF;
+   font-weight: 500;
+   border-radius: 0.2rem;
+   cursor: pointer;
+}
+#LogIn{
+    cursor: pointer;
+}

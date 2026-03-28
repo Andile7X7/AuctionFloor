@@ -1,0 +1,592 @@
+/* --- Page Layout --- */
+.dashboardRoot {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: #9CA3AF;
+    font-size: 16px;
+}
+
+.titleArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.pageTitle {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    color: #fff;
+    letter-spacing: -1px;
+}
+.pageSubtitle {
+    color: #9CA3AF;
+    font-size: 14px;
+    margin: 0;
+}
+.lastUpdated {
+    text-align: right;
+    font-size: 10px;
+    font-weight: 600;
+    color: #9CA3AF;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.lastUpdated span {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 8px;
+    letter-spacing: 0;
+}
+
+/* --- Overview Cards --- */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.statCard {
+    background-color: #121620;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.statHeader {
+    font-size: 11px;
+    font-weight: 600;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+.statValue {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+}
+.statValue.accent {
+    color: #ffb480; 
+}
+.statFooter {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #9CA3AF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.statTrendUp { color: #6366F1; }
+.statIconBg {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Shared Layout Sections --- */
+.middleSection {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+}
+.sectionTitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.viewAll {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9CA3AF;
+    cursor: pointer;
+    text-decoration: none;
+}
+.viewAll:hover { color: #fff; }
+
+/* --- Active Listings --- */
+.flexColList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.listingCard {
+    background-color: #121620;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 16px;
+    transition: background-color 0.2s;
+}
+.listingCard:hover {
+    background-color: #1a1e2a;
+}
+.listingImageWrapper {
+    width: 160px;
+    height: 90px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.listingImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.listingDetails {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+.listingTitleArea {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.liveTag {
+    background-color: rgba(255, 59, 48, 0.1);
+    color: #ff3b30;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+.listingName {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+.listingMeta {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: #9CA3AF;
+    font-weight: 500;
+}
+.listingMeta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.listingBidInfo {
+    text-align: right;
+    padding-right: 24px;
+}
+.highestBidLabel {
+    display: block;
+    font-size: 10px;
+    color: #9CA3AF;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.highestBid {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 4px;
+}
+.listingActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    padding-left: 16px;
+    padding-right: 8px;
+}
+.iconBtn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+.iconBtn:hover {
+    color: #fff;
+}
+
+/* --- Activity Feed --- */
+.feedCard {
+    background-color: #121620;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.feedList {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    flex-grow: 1;
+}
+.feedItem {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.avatarCircle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #2e3342;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+.feedContent {
+    flex-grow: 1;
+}
+.feedHeaderRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+.feedUser {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+.feedTime {
+    font-size: 11px;
+    color: #6b7280;
+}
+.feedDetails {
+    font-size: 13px;
+    color: #9CA3AF;
+}
+.feedDetails strong {
+    color: #fff;
+}
+
+/* Bidding Summary Box */
+.summaryBox {
+    background-color: #1a1e2a;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.summaryTitle {
+    margin: 0 0 16px 0;
+    font-size: 11px;
+    color: #9CA3AF;
+    letter-spacing: 1px;
+}
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: #9CA3AF;
+}
+.summaryRow strong {
+    color: #fff;
+}
+.progressBar {
+    height: 4px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+.progressFill {
+    width: 70%;
+    height: 100%;
+    background-color: #6366F1;
+    border-radius: 4px;
+}
+.liveIndicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: #ffb480;
+    letter-spacing: 1px;
+}
+.pulsingDot {
+    width: 6px;
+    height: 6px;
+    background-color: #ffb480;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 180, 128, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(255, 180, 128, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 180, 128, 0); }
+}
+
+/* --- Studio Management --- */
+.bottomSection { margin-top: 16px; }
+.bottomGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.managementCard {
+    background-color: #121620;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+.cardHeader {
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.headerIconSmall {
+    color: #9CA3AF;
+    font-size: 14px;
+}
+.cardContent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Payout Method */
+.paymentMethod {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #1a1e2a;
+    padding: 16px;
+    border-radius: 6px;
+}
+.visaBox {
+    background-color: #fff;
+    color: #121212;
+    font-weight: 800;
+    font-size: 10px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+.paymentDetails {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.paymentDetails strong {
+    font-size: 14px;
+    color: #fff;
+}
+.paymentDetails span {
+    font-size: 11px;
+    color: #9CA3AF;
+    margin-top: 2px;
+}
+.editBtn {
+    background: none;
+    border: none;
+    color: #6366F1;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.addBankBtn {
+    background: none;
+    border: 1px dashed rgba(255,255,255,0.1);
+    color: #9CA3AF;
+    padding: 16px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.addBankBtn:hover {
+    border-color: rgba(255,255,255,0.3);
+    color: #fff;
+}
+
+/* Toggles */
+.toggleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggleInfo {
+    display: flex;
+    flex-direction: column;
+}
+.toggleInfo strong {
+    font-size: 13px;
+    color: #fff;
+}
+.toggleInfo span {
+    font-size: 11px;
+    color: #9CA3AF;
+    margin-top: 4px;
+}
+.toggleSwitch {
+    width: 40px;
+    height: 20px;
+    background-color: #2e3342;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.toggleSwitch.active {
+    background-color: #6366F1;
+}
+.toggleKnob {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s;
+}
+.toggleSwitch.active .toggleKnob {
+    transform: translateX(20px);
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 48px;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #6b7280;
+}
+.footerLinks {
+    display: flex;
+    gap: 24px;
+}
+.footerLinks a {
+    color: #6b7280;
+    text-decoration: none;
+}
+.footerLinks a:hover {
+    color: #9CA3AF;
+}
+
+/* --- Mobile Responsiveness --- */
+
+@media (max-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .middleSection {
+        grid-template-columns: 1fr;
+    }
+
+    .bottomGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .pageTitle {
+        font-size: 24px;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .listingCard {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .listingImageWrapper {
+        width: 100%;
+        height: 180px;
+    }
+
+    .listingBidInfo {
+        text-align: left;
+        padding-right: 0;
+        margin-top: 8px;
+    }
+
+    .listingActions {
+        flex-direction: row;
+        border-left: none;
+        padding-left: 0;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboardRoot {
+        gap: 24px;
+    }
+
+    .pageTitle {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .pageSubtitle {
+        font-size: 13px;
+    }
+
+    .statValue {
+        font-size: 32px;
+    }
+
+    .statCard {
+        padding: 20px;
+    }
+
+    .listingImageWrapper {
+        height: 140px;
+    }
+
+    .highestBid {
+        font-size: 18px;
+    }
+}

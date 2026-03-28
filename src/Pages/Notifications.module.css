@@ -1,0 +1,196 @@
+.pageContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 48px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+}
+
+.markAllBtn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #9CA3AF;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.markAllBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.notificationList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notificationItem {
+    background-color: #121620;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.notificationItem:hover {
+    background-color: #1a1e2a;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.unread {
+    background-color: rgba(99, 102, 241, 0.03);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.iconArea {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+/* Specific Icons */
+.bidIcon { color: #34d399; }
+.likeIcon { color: #ef4444; }
+.commentIcon { color: #60a5fa; }
+.bookmarkIcon { color: #fbbf24; }
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.messageText {
+    color: #9CA3AF;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.actorName {
+    color: #fff;
+    font-weight: 700;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.unreadDot {
+    color: #6366F1;
+    font-size: 10px;
+}
+
+.deleteBtn {
+    background: none;
+    border: none;
+    color: #4b5563;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    opacity: 0; /* Hidden until hover */
+}
+
+.notificationItem:hover .deleteBtn {
+    opacity: 1;
+}
+
+.deleteBtn:hover {
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.emptyState {
+    text-align: center;
+    padding: 100px 24px;
+    background-color: #121620;
+    border-radius: 20px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.emptyIcon {
+    font-size: 48px;
+    color: #374151;
+    margin-bottom: 24px;
+}
+
+.emptyState h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.emptyState p {
+    color: #9CA3AF;
+    font-size: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .notificationItem {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .iconArea {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .messageText {
+        font-size: 13px;
+    }
+
+    .deleteBtn {
+        opacity: 1; /* Always show delete on mobile since no hover */
+    }
+}

@@ -1,0 +1,171 @@
+.pageContainer {
+    min-height: 100vh;
+    background-color: #0e111a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #F9FAFB;
+}
+
+.formCard {
+    background-color: #121620;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.backBtn {
+    background: none;
+    border: none;
+    color: #9CA3AF;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.backBtn:hover {
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #9CA3AF;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.input {
+    background-color: #1a1e2a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 14px 16px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    border-color: #6366F1;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.fileInputContainer {
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 32px;
+    text-align: center;
+    transition: border-color 0.2s;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.fileInputContainer:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.fileInput {
+    display: none;
+}
+
+.fileLabel {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+.uploadIcon {
+    font-size: 32px;
+    color: #6366F1;
+}
+
+.previewImage {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 6px;
+    margin-top: 16px;
+    object-fit: contain;
+}
+
+.submitBtn {
+    background: linear-gradient(135deg, #6b82ff, #475eff);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(71, 94, 255, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.submitBtn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(71, 94, 255, 0.6);
+}
+
+.submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: #4B5563;
+    box-shadow: none;
+}
+
+.errorBox {
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+}
