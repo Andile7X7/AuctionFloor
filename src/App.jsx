@@ -28,6 +28,7 @@ function App() {
         <Route path={'/listing/:id'} element={<ListingDetail />} />
         <Route path={'/dashboard/activity'} element={<ActivityTracking />} />
         <Route path={'/dashboard/notifications'} element={<Notifications />} />
+        <Route path={'*'} element={<AuctionFloor />} />
       </Routes>
     </>
   )
