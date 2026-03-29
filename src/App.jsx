@@ -15,10 +15,12 @@ import AddListing from './Pages/AddListing';
 import MyListings from './Pages/MyListings';
 import ListingDetail from './Pages/ListingDetail';
 import ActivityTracking from './Pages/ActivityTracking';
+import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
     <>
+      <HashRouter basename = "/AuctionFloor">
       <Routes>
         <Route path={'/'} element={<AuctionFloor />} />
         <Route path={'/signup'} element={<SignUpPage />} />
@@ -30,6 +32,7 @@ function App() {
         <Route path={'/dashboard/notifications'} element={<Notifications />} />
         <Route path={'*'} element={<AuctionFloor />} />
       </Routes>
+    </HashRouter>
     </>
   )
 }
